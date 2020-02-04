@@ -7,13 +7,15 @@ body {
     width: 100vw;
   }
   
+/* Extra Small and up, iPhone Retina (Portrait Phones) */
 @media (min-width : 320px) {
 
+
 }
+/* Medium and up (Tablets) */
 @media (min-width: 768px) {
 
 }
-  
   .logo {
     width: 30%;
     height: 80%;
