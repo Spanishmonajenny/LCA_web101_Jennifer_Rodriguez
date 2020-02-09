@@ -7,15 +7,7 @@ body {
     width: 100vw;
   }
   
-/* Extra Small and up, iPhone Retina (Portrait Phones) */
-@media (min-width : 320px) {
 
-
-}
-/* Medium and up (Tablets) */
-@media (min-width: 768px) {
-
-}
   .logo {
     width: 30%;
     height: 80%;
@@ -102,3 +94,21 @@ body {
     font-style: Arial;
     float: up;
   }
+  /* Extra Small and up, iPhone Retina (Portrait Phones) */
+  @media (max-width : 320px) {
+    nav > a {font-size: 10px;}
+   }
+@media (max-width :320px) {
+  button{font-size: 10px;}
+}
+@media (max-width :320px) {
+img,object{ 
+  min-height: 90%;
+  max-width: 90%;
+}
+}
+}
+/* Medium and up (Tablets) */
+@media (max-width: 768px) {
+
+}
