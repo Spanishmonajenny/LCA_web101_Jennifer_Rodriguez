@@ -1,0 +1,484 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1.5fr;
+    grid-template-rows: 0.5fr 2.5fr 1fr;
+    grid-template-areas: "Header . Clock" "cal . weather" "To-Do\ list Calendar Notes";
+  }
+  
+  .Header { grid-area: Header; }
+  
+  .cal { grid-area: cal; }
+  @import url('https://fonts.googleapis.com/css?family=Space+Mono');
+
+/* quick reset so all our padding is the right size */
+* {
+  box-sizing: border-box;
+}
+
+.calculator input,
+.calc-button   {
+  font-family: 'Space Mono';
+}
+
+/* add some spacing */
+body          {
+  background: #F6F6F6;
+  padding-bottom: 30px;
+  padding-top: 30px;  
+}
+
+/* limit the width and center */
+.calculator   {
+  max-width: 400px;
+  margin: 0 auto;
+  border: 2px solid #111;
+  border-radius: 5px;
+}
+
+.calculator input   {
+  /* reset basic form styles */
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+
+  padding: 20px 10px;
+  width: 100%;
+  border-bottom: 2px solid #111;
+  color: #333;
+  text-align: right;
+  font-size: 40px;
+  border-radius: 0;
+}
+
+.calc-button  {
+  background: rgba(0, 0, 0, 0.5); /* light background with opacity 50% */
+  border: 1px solid #111; /* black border */
+  padding: 20px;
+  color: #EEE; /* white text */
+  border-radius: 5px; /* rounded corners */
+  font-size: 22px; /* larger fonts */
+  cursor: pointer; /* make it look clickable */
+}
+
+.calculator-buttons {
+  /* small spacing within our container */
+  padding: 20px;
+
+  /* the grid stuff! */
+  display: grid;
+
+  /* create 4 columns */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  /* add the grid gap */
+  grid-gap: 15px;
+}
+
+/* span across 3 columns */
+.is-zero,
+.is-clear   {
+  grid-column: span 3;
+}
+
+/* go blue */
+.is-clear   {
+  background: #3572DB;
+}
+
+.is-equals {
+  background: #28D060;
+}
+  
+  .weather { grid-area: weather; }
+  *{
+    box-sizing: border-box;
+    font-family: 'Droid Sans', sans-serif;
+  }
+  html,body,.wrapper{
+    height:100%;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .wrapper::before{
+    content: "";
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width: 100%;
+  }
+  .wrapper{
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/45816/IMG_00000159_hdr.jpg');
+    background-size: cover;
+    background-attachment: fixed; 
+    position: absolute;
+  }
+  .weather{
+    position: relative;
+    height: 275px;
+    width: 400px;
+  background: #7abcff; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  
+    border-radius: 10px;
+    top:calc(50% - 125px);
+    left: calc(50% - 200px);
+    border: 3px solid #FFFFFF;
+    padding: 10px 20px;
+  }
+  .weather::after{
+    width: 400px;
+    height: 5px;
+    background: red;
+    position:absolute;
+    top:15px;
+  }
+  .city h1{
+    padding: 0;
+    margin: 5px 0px;
+    text-align: center;
+    font-size: 11pt;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: normal;
+  }
+  .icon{
+    width: 50%;
+    height:auto;
+    float: left;
+    padding: 10px;
+    color: gold;
+    margin: 10px 0;
+    position: relative;
+  }
+  .icon .fa-sun-o{
+    font-size: 88pt;
+    position: absolute;
+    text-shadow: 0 0 20px #fff;
+  }
+  .icon .fa-cloud{
+    font-size: 58pt;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: rgba(255,255,255,0.90);
+  }
+  .icon .fa-cloud + .two{
+    top: 15px;
+    right: 5px;
+    font-size: 48pt;
+    color: #fff;
+  }
+  .temp{
+    width: 50%;
+    float: left;
+    padding: 10px;
+    color: #FFFFFF;
+    margin: 5px 0;
+  }
+  .current{
+    font-size: 68pt;
+    text-align: center;
+    font-weight: lighter;
+  }
+  .clearfix{
+    clear:both;
+    width: 100%;
+    border-top: 3px solid #FFFFFF;
+  
+  }
+  .left,.date,.right{
+    float: left;
+    width: 33%;
+    height: 35px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .left i, .right i{
+    font-size: 38pt;
+    color: #FFFFFF;
+    position: relative;
+    top: -5px;
+  }
+  .date{
+    text-align: center;
+    position: relative;
+    top: -15px;
+    color: #FFFFFF;
+    font-size: 18pt;
+    
+  }
+  .right{
+    text-align: right;
+    
+  }
+  .spin {
+    animation: spin 60s linear infinite,
+      glow 10s linear infinite;
+  }
+  @keyframes spin{
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  .wind{
+    animation: wind 7.5s ease-in-out infinite;
+  }
+  @keyframes wind{
+    50%{
+       top: 30px;
+       right: 15px;
+    }
+  }
+  .glow{
+    animation: ;
+  }
+  @keyframes glow{
+    50%{
+       text-shadow: 0 0 5px #fff; 
+    }
+  }
+  
+  .Notes { grid-area: Notes; }
+  
+  .Calendar { grid-area: Calendar; }
+  :root {
+    --teal-050: #effcf6;
+    --teal-100: #c6f7e2;
+    --teal-200: #8eedc7;
+    --teal-300: #65d6ad;
+    --teal-400: #3ebd93;
+    --teal-500: #27ab83;
+    --teal-600: #199473;
+    --teal-700: #147d64;
+    --teal-800: #0c6b58;
+    --teal-900: #014d40;
+  
+    --blue-grey-050: #f0f4f8;
+    --blue-grey-100: #d9e2ec;
+    --blue-grey-200: #bcccdc;
+    --blue-grey-300: #9fb3c8;
+    --blue-grey-400: #829ab1;
+    --blue-grey-500: #627d98;
+    --blue-grey-600: #486581;
+    --blue-grey-700: #334e68;
+    --blue-grey-800: #243b53;
+    --blue-grey-900: #102a43;
+  }
+  
+  html {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 125%;
+    line-height: 1.4;
+    font-weight: 400;
+    color: var(--blue-grey-900);
+  }
+  
+  body {
+    min-height: 100vh;
+    background: var(--blue-grey-100);
+  }
+  
+  main {
+    max-width: max-content;
+    margin: 3em auto 0 auto;
+    padding: 1.5em;
+    background-color: #fff;
+    border: 2px solid var(--blue-grey-200);
+    border-radius: 8px;
+  }
+  
+  // For the month
+  .month-indicator {
+    color: var(--blue-grey-700);
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  // CSS grid used for the dates
+  .day-of-week,
+  .date-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  
+  // Styles for the weekday/weekend header
+  .day-of-week {
+    margin-top: 1.25em;
+  }
+  
+  .day-of-week > * {
+    font-size: 0.7em;
+    color: var(--blue-grey-400);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    font-variant: small-caps;
+    text-align: center;
+  }
+  
+  /* Dates */
+  .date-grid {
+    margin-top: 0.5em;
+  }
+  
+  /* Positioning the first day */
+  .date-grid button:first-child {
+    grid-column: 6;
+  }
+  
+  // Style for each day
+  .date-grid button {
+    position: relative;
+    border: 0;
+    width: 4.5ch;
+    height: 4.5ch;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--blue-grey-600);
+  }
+  
+  .date-grid button:hover,
+  .date-grid button:focus {
+    outline: none;
+    background-color: var(--blue-grey-050);
+    color: var(--blue-grey-700);
+  }
+  
+  .date-grid button:active,
+  .date-grid button.is-selected {
+    background-color: var(--teal-100);
+    color: var(--teal-900);
+  }
+  
+  
+  .Clock { grid-area: Clock; }
+  
+  .To-Do\ list { grid-area: To-Do\ list; }
+  body {
+    background: #fff;
+    color: #333;
+    font-family: Lato, sans-serif;
+  }
+  .container {
+    display: block;
+    width: 400px;
+    margin: 100px auto 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li * {
+    float: left;
+  }
+  li, h3 {
+    clear:both;
+    list-style:none;
+  }
+  input, button {
+    outline: none;
+  }
+  button {
+    background: none;
+    border: 0px;
+    color: #888;
+    font-size: 15px;
+    width: 60px;
+    margin: 10px 0 0;
+    font-family: Lato, sans-serif;
+    cursor: pointer;
+  }
+  button:hover {
+    color: #333;
+  }
+  /* Heading */
+  h3,
+  label[for='new-task'] {
+    color: #333;
+    font-weight: 700;
+    font-size: 15px;
+    border-bottom: 2px solid #333;
+    padding: 30px 0 10px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  input[type="text"] {
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+    height: 18px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 6px;
+    font-family: Lato, sans-serif;
+    color: #888;
+  }
+  input[type="text"]:focus {
+    color: #333;
+  }
+  
+  /* New Task */
+  label[for='new-task'] {
+    display: block;
+    margin: 0 0 20px;
+  }
+  input#new-task {
+    float: left;
+    width: 318px;
+  }
+  p > button:hover {
+    color: #0FC57C;
+  }
+  
+  /* Task list */
+  li {
+    overflow: hidden;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+  }
+  li > input[type="checkbox"] {
+    margin: 0 10px;
+    position: relative;
+    top: 15px;
+  }
+  li > label {
+    font-size: 18px;
+    line-height: 40px;
+    width: 237px;
+    padding: 0 0 0 11px;
+  }
+  li >  input[type="text"] {
+    width: 226px;
+  }
+  li > .delete:hover {
+    color: #CF2323;
+  }
+  
+  /* Completed */
+  #completed-tasks label {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  /* Edit Task */
+  ul li input[type=text] {
+    display:none;
+  }
+  
+  ul li.editMode input[type=text] {
+    display:block;
+  }
+  
+  ul li.editMode label {
+    display:none;
+  }
