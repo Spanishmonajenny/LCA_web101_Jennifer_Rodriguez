@@ -1,211 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-    <Head>
-        <link rel="stylesheet" href="./dashboard-style.css">
-    </Head>
-    <body>
-        <div class="grid-container">
-            <div class="Header"></div>
-            <div class="cal"></div>
-            <div class="calculator">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media(min-width: width 768px; ch){
 
-                <!-- the input -->
-                <input type="number">
-              
-                <!-- the buttons -->
-                <div class="calculator-buttons">
-                  <button class="calc-button is-clear">C</button>
-                  <button class="calc-button">&divide;</button>
-              
-                  <button class="calc-button">7</button>
-                  <button class="calc-button">8</button>
-                  <button class="calc-button">9</button>
-                  <button class="calc-button">&times;</button>
-              
-                  <button class="calc-button">4</button>
-                  <button class="calc-button">5</button>
-                  <button class="calc-button">6</button>
-                  <button class="calc-button">&minus;</button>
-              
-                  <button class="calc-button">1</button>
-                  <button class="calc-button">2</button>
-                  <button class="calc-button">3</button>
-                  <button class="calc-button">&plus;</button>
-              
-                  <button class="calc-button is-zero">0</button>
-                  <button class="calc-button is-equals">&equals;</button>
-                </div>
-                
-              </div>
-            <div class="weather">
-                <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Droid+Sans">
+        }
+.grid-container {
+ display:flex;
+ align-items: flex-start;
+ justify-content: space-around;
+ 
+}
 
-<div class="wrapper">
-  <div class="weather">
-    <div class="city"><h1>Toronto, On, Canada</h1></div>
-          <div class="clearfix"></div>
+.container-1 div{
+    border:1px #ccc solid;
+    padding:10px;
+}
 
-    <div class="cont">
-      <div class="icon">
-        <i class="fa fa-sun-o spin glow"></i>
-        <i class="fa fa-cloud wind"></i>
-        <i class="fa fa-cloud two"></i>
+.weather { grid-area: weather;
+    flex:1;
+}
+
+.Calculator { grid-area: Calculator;
+Flex:1; 
+order:3;
+
+}
+
+.Calendar- { grid-area: Calendar-; 
+Flex:3;}
+
+.To-do\ list { grid-area: To-do\ list;
+Flex:1; }
+
+.Date-and\ time { grid-area: Date-and\ time; 
+Flex:1;}
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="weather">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/33d58n101d86/lubbock/" data-label_1="LUBBOCK" data-label_2="WEATHER" data-theme="original" >LUBBOCK WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+            
+        </div>
+        <div class="Calculator">
+            <iframe width="219" height="302" src="http://calculator-1.com/outdoor/?f=000000&r=666666" scrolling="no" frameborder="0"></iframe><br /><a href="https://calculator-1.com/">
+        </div>
+        <div class="Calendar-">
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=c3BhbmlzaG1vbmFqZW5ueUBnbWFpbC5jb20&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%237986CB&amp;color=%2333B679&amp;color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div class="To-do\ list"></div>
+        <div class="Date-and\ time">
+            <iframe src="http://free.timeanddate.com/clock/i75s4l09/n544/szw210/szh210/hoced1c24/hbw12/cf100/hnce1ead6/fiv0/fas34/fdi72/mqv0/mhc000/mhs3/mhl20/mhw1/mhd84/mmv0/hhs1/hms1/hsc000/hss1" frameborder="0" width="210" height="210"></iframe>
+
+
+        </div>
       </div>
-      <div class="temp">
-        <div class="current">
-          18&deg;
-        </div>
-        <div class="high">
-          High: 20&deg;
-        </div>
-        <div class="low">
-          Low: 5&deg;
-        </div>
-      </div>
-      <div class="clearfix"></div>
-      <div class="left"><i class="fa fa-angle-left"></i></div>
-      <div class="date"><p>06/21/2013</p></div>
-      <div class="right"><i class="fa fa-angle-right"></i></div>
-    </div>
-  </div> <!-- weather -->
-</div> <!-- wrapper -->
-            </div>
-            <div class="Notes"></div>
-            <div class="Calendar"></div>
-            <main>
-                <div class="calendar">
-                  <div class="month-indicator">
-                    <time datetime="2020-02"> February 2020 </time>
-                  </div>
-                  <div class="day-of-week">
-                    <div>Su</div>
-                    <div>Mo</div>
-                    <div>Tu</div>
-                    <div>We</div>
-                    <div>Th</div>
-                    <div>Fr</div>
-                    <div>Sa</div>
-                  </div>
-                  <div class="date-grid">
-                    <button>
-                      <time datetime="2020-02-01">1</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-02">2</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-03">3</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-04">4</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-05">5</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-06">6</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-07">7</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-08">8</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-09">9</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-10">10</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-11">11</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-12">12</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-13">13</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-14">14</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-15">15</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-16">16</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-17">17</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-18">18</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-19">19</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-20">20</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-21">21</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-22">22</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-23">23</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-24">24</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-25">25</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-26">26</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-27">27</time>
-                    </button>
-                    <button>
-                      <time datetime="2020-02-28">28</time>
-                    </button>
-                  </div>
-                </div>
-            </main>
-            <div class="Clock"></div>
-            <div class="To-Do\ list"></div>
-            <html>
-  <head>
-    <title>Todo App</title>
-    <!-- <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8">    
-  </head>
-  <body>
-    <div class="container">
-      <p>
-        <label for="new-task">Add Item</label><input id="new-task" type="text"><button>Add</button>
-      </p>
-      
-      <h3>Todo</h3>
-      <ul id="incomplete-tasks">
-        <li><input type="checkbox"><label>Pay Bills</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-        <li class="editMode"><input type="checkbox"><label>Go Shopping</label><input type="text" value="Go Shopping"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-        
-      </ul>
-      
-      <h3>Completed</h3>
-      <ul id="completed-tasks">
-        <li><input type="checkbox" checked><label>See the Doctor</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-      </ul>
-    </div>
-
-    <script type="text/javascript" src="app.js"></script>
-
-  </body>
-</html>
-          </div>
-    </body>
+</body>
 </html>
