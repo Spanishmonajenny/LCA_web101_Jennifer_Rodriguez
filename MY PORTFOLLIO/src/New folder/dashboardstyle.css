@@ -1,3 +1,7 @@
+
+
+
+
 @media(min-width: width 768px; ch){
 
 }
@@ -8,6 +12,8 @@ justify-content: space-around;
 
 }
 
+
+.grid-container{ 
 .container-1 div{
 border:1px #ccc solid;
 padding:10px;
