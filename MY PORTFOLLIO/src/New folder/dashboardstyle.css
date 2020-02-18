@@ -1,39 +1,54 @@
+<style>
 
-
-
-
-@media(min-width: width 768px; ch){
-
-}
 .grid-container {
-display:flex;
-align-items: flex-start;
-justify-content: space-around;
-
+ display:flex;
+ align-items: flex-start;
+ 
+ 
 }
 
+.grid-container {
+    
+    background-image: url(https://images.unsplash.com/photo-1564077404327-93746cb46363?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80);
+    background-repeat: repeat;
+    background-position-y: center ;
+}
 
-.grid-container{ 
 .container-1 div{
-border:1px #ccc solid;
-padding:10px;
+    border:1px #ccc solid;
+    padding:10px;
 }
 
 .weather { grid-area: weather;
-flex:1;
+    flex:1;
 }
 
 .Calculator { grid-area: Calculator;
-Flex:1; 
-order:3;
+order:1;
+float:right;
 
 }
 
 .Calendar- { grid-area: Calendar-; 
-Flex:3;}
+Flex:4;
+}
 
 .To-do\ list { grid-area: To-do\ list;
 Flex:1; }
 
 .Date-and\ time { grid-area: Date-and\ time; 
-Flex:1;}
+Flex:1;
+}
+
+    </style>
+
+    @media (max-width:320px) {
+   
+    }
+    
+    @media (min-width: 768px) {
+
+    }
+    @media (min-width: 992px) {
+
+    }
