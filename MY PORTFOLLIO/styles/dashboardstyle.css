@@ -1,5 +1,6 @@
 
 
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -8,6 +9,7 @@
  width:405px;
 background-color: rgb(43, 28, 53);
 column-span: 1 ;
+
 
 }
   
