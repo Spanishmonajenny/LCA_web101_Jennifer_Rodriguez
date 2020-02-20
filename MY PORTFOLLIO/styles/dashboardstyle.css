@@ -1,3 +1,4 @@
+<<<<<<< HEAD:MY PORTFOLLIO/styles/dashboardstyle.css
 @media(min-width: width 768px; ch){
 
 }
@@ -11,23 +12,108 @@ justify-content: space-around;
 .container-1 div{
 border:1px #ccc solid;
 padding:10px;
+=======
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "weather weather date\/time" "Cal picture Calendar" "Cal picture Calendar" "to-do\ list to-do\ list .";
+ width:405px;
+background-color: rgb(43, 28, 53);
+column-span: 1 ;
+
+>>>>>>> 84f6a8b1b0a25432539a348923bbd379b0a0e1d9:MY PORTFOLLIO/src/New folder/dashboardstyle.css
 }
+  
+  .Calendar { grid-area: Calendar;
+    background-color: rgb(23, 26, 24);
+color: rgb(8, 139, 146); 
+padding-bottom: 0%;
+column-span: 2;}
+  
+  .weather { grid-area: weather;}
+  
+  .date\/time { grid-area: date\/time; }
+  
+  .calculator
+    *{
+        box-sizing: border-box;
+      }
+      
+      body {
+        background-image: url(https://images.unsplash.com/photo-1580398562556-d33329a0f29b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80);
+        image:no-repeat;
+        padding-bottom:1px;
+        padding-top: 1px;
+      }
+      
+      .calculator {
+      max-width: 400px;
+      margin: 0 auto;
+        border: 2px solid rgb(47, 228, 24);
+        border-radius:5px;
+      }
+      
+      .calculator input {
+        background: none;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        border-bottom: 2px solid rgb(143, 172, 16);
+        padding:20px;
+        text-align: right;
+        font-size: 40px;
+      }
+      
+      .calculator-buttons{
+        padding:20px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(5,1fr);
+        grid-gap:15px;
 
-.weather { grid-area: weather;
-flex:1;
+        
+      }
+      .calc-button {
+        background: rgba(122, 8, 228, 0.5);
+        border: 1px solid rgb(143, 172, 16);
+        padding: 20px;
+        color: rgb(252, 248, 248);
+        border-radius: 5px;
+        font-size: 22px;
+        cursor: pointer;
+      }
+      .is-clear {
+          grid-column: span 3;
+          background:orangered
+      }
+      .is-zero {
+          grid-column: span 3;
+          background:black;
+      }
+      
+    
+ }
+  
+  .picture { grid-area: picture;
+float: left; }
+  
+  .to-do\ list { grid-area: to-do\ list; 
+   
+    body {
+        padding:0;
+        margin: 0;
+        Font-family: "montserrat",san-serif;
+        background: #f1f1f1;
+      }
+      
+      .middle{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      
 }
-
-.Calculator { grid-area: Calculator;
-Flex:1; 
-order:3;
-
-}
-
-.Calendar- { grid-area: Calendar-; 
-Flex:3;}
-
-.To-do\ list { grid-area: To-do\ list;
-Flex:1; }
-
-.Date-and\ time { grid-area: Date-and\ time; 
-Flex:1;}
