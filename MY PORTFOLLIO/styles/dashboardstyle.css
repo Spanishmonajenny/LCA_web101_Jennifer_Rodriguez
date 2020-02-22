@@ -8,20 +8,19 @@
     grid-template-areas: "weather weather date\/time" "Cal picture Calendar" "Cal picture Calendar" "to-do\ list to-do\ list .";
  width:405px;
 background-color: rgb(43, 28, 53);
-column-span: 1 ;
-
-
+grid-template-rows: span 2;
 }
   
   .Calendar { grid-area: Calendar;
     background-color: rgb(23, 26, 24);
 color: rgb(8, 139, 146); 
 padding-bottom: 0%;
-column-span: 2;}
+}
   
   .weather { grid-area: weather;}
   
-  .date\/time { grid-area: date\/time; }
+  .date\/time { grid-area: date\/time;
+  float: left; }
   
   .calculator
     *{
@@ -36,10 +35,12 @@ column-span: 2;}
       }
       
       .calculator {
+        background-color: rgb(226, 124, 209);
       max-width: 400px;
-      margin: 0 auto;
-        border: 2px solid rgb(47, 228, 24);
-        border-radius:5px;
+      margin:  auto;
+        border: 2px solid rgb(2, 10, 0);
+        border-radius:2px;
+        float:right;
       }
       
       .calculator input {
@@ -47,7 +48,7 @@ column-span: 2;}
         border: none;
         box-shadow: none;
         width: 100%;
-        border-bottom: 2px solid rgb(143, 172, 16);
+        border-bottom: 2px solid rgb(15, 19, 1);
         padding:20px;
         text-align: right;
         font-size: 40px;
@@ -63,28 +64,28 @@ column-span: 2;}
         
       }
       .calc-button {
-        background: rgba(122, 8, 228, 0.5);
-        border: 1px solid rgb(143, 172, 16);
+        background: rgba(8, 1, 15, 0.5);
+        border: 1px solid rgb(57, 27, 139);
         padding: 20px;
-        color: rgb(252, 248, 248);
+        color: rgb(248, 245, 245);
         border-radius: 5px;
         font-size: 22px;
         cursor: pointer;
       }
       .is-clear {
           grid-column: span 3;
-          background:orangered
+          background:rgb(243, 8, 20)
       }
       .is-zero {
           grid-column: span 3;
-          background:black;
+          background:rgb(17, 1, 1);
       }
       
     
  }
   
   .picture { grid-area: picture;
-float: left; }
+ }
   
   .to-do\ list { grid-area: to-do\ list; 
    
