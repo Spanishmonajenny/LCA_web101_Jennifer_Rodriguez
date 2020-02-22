@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.container{
+  color:rgb(248, 245, 245);
+    display:flex;
+    flex-wrap: wrap;
+    flex: 0 1 60%;
+    max-width:400px;
+}
+
+.buttons{
+  
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 100%;
+}
+.placeholder{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 100%;
+}
+
+ .placeholder{
+    height: 50px;
+    border: 2px solid black;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 40px;
+    background:rgb(226, 124, 209) ;
+    color:gray;
+    padding:0 10px;
+}
+.button{
+    display:flex;
+    flex: 0 1 25%;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 2px solid black;
+    border-top:none;
+    border-left:none;
+    cursor: pointer;
+    background: rgb(226, 124, 209);
+    font-size:40px;
+}
+
+
+.button resetBtn{
+    flex-grow: 3;
+}
+.zero-btn {
+ flex-grow: 2;
+}
+.doubleBordered{
+    border: 2px solid black;
+}
+
