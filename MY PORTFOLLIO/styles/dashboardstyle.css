@@ -1,0 +1,107 @@
+
+
+
+.Calendar- { grid-area: Calendar-; 
+Flex:3;}
+
+.To-do\ list { grid-area: To-do\ list;
+Flex:1; }
+
+.Date-and\ time { grid-area: Date-and\ time; 
+Flex:1;}
+=======
+  
+  .Calendar { grid-area: Calendar;
+    background-color: rgb(23, 26, 24);
+color: rgb(8, 139, 146); 
+padding-bottom: 0%;
+}
+  
+  .weather { grid-area: weather;}
+  
+  .date\/time { grid-area: date\/time;
+  float: left; }
+  
+  .calculator
+    *{
+        box-sizing: border-box;
+      }
+      
+      body {
+        background-image: url(https://images.unsplash.com/photo-1580398562556-d33329a0f29b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80);
+        image:no-repeat;
+        padding-bottom:1px;
+        padding-top: 1px;
+      }
+      
+      .calculator {
+        background-color: rgb(226, 124, 209);
+      max-width: 400px;
+      margin:  auto;
+        border: 2px solid rgb(2, 10, 0);
+        border-radius:2px;
+        float:right;
+      }
+      
+      .calculator input {
+        background: none;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        border-bottom: 2px solid rgb(15, 19, 1);
+        padding:20px;
+        text-align: right;
+        font-size: 40px;
+      }
+      
+      .calculator-buttons{
+        padding:20px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(5,1fr);
+        grid-gap:15px;
+
+        
+      }
+      .calc-button {
+        background: rgba(8, 1, 15, 0.5);
+        border: 1px solid rgb(57, 27, 139);
+        padding: 20px;
+        color: rgb(248, 245, 245);
+        border-radius: 5px;
+        font-size: 22px;
+        cursor: pointer;
+      }
+      .is-clear {
+          grid-column: span 3;
+          background:rgb(243, 8, 20)
+      }
+      .is-zero {
+          grid-column: span 3;
+          background:rgb(17, 1, 1);
+      }
+      
+    
+ }
+  
+  .picture { grid-area: picture;
+ }
+  
+  .to-do\ list { grid-area: to-do\ list; 
+   
+    body {
+        padding:0;
+        margin: 0;
+        Font-family: "montserrat",san-serif;
+        background: #f1f1f1;
+      }
+      
+      .middle{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      
+}
+
