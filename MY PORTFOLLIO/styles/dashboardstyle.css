@@ -1,15 +1,15 @@
 
 
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "weather weather date\/time" "Cal picture Calendar" "Cal picture Calendar" "to-do\ list to-do\ list .";
- width:405px;
-background-color: rgb(43, 28, 53);
-grid-template-rows: span 2;
-}
+.Calendar- { grid-area: Calendar-; 
+Flex:3;}
+
+.To-do\ list { grid-area: To-do\ list;
+Flex:1; }
+
+.Date-and\ time { grid-area: Date-and\ time; 
+Flex:1;}
+=======
   
   .Calendar { grid-area: Calendar;
     background-color: rgb(23, 26, 24);
@@ -104,3 +104,4 @@ padding-bottom: 0%;
       }
       
 }
+
